@@ -2,7 +2,7 @@
     "name": "mern",
     "version": "1.0.0",
     "description": "MERN practice using Traversy Media tutorials",
-    "main": "index.js",
+    "main": "server.js",
     "scripts": {
         "test": "node server.js",
         "server": "nodemon server.js"
