@@ -31,6 +31,7 @@ class AppNavbar extends Component{
         });
     } 
     render(){
+        
       <div>
         <Navbar color="dark" 
         dark expand="sm" 
@@ -41,7 +42,7 @@ class AppNavbar extends Component{
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav class="ml=auto" navbar>
                   <NavItem>
-                    <NavLink href="#">Github</NavLink>
+                    <NavLink href="https://github.com/trallala9/MERN.git">Github</NavLink>
                   </NavItem>
                 </Nav>
               </Collapse>
