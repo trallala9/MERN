@@ -1,14 +1,17 @@
-import React,{Component} from 'react';
+import React, {
+  Component
+} from 'react';
+//from reactstrap
 import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    Container
-   
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  Container
+
 } from 'reactstrap';
 
 /*class AppNavbar extends Component {
@@ -21,35 +24,36 @@ toggle =() => {
     
 }
 }*/
-class AppNavbar extends Component{
-    state = {
-        isOpen: false
-    }
-    toggle = () => {
-        this.setState({
-        isOpen: !this.state.isOpen
-        });
-    } 
-    render(){
-        
-      <div>
-        <Navbar color="dark" 
-        dark expand="sm" 
-        className="mb-5">
-          <Container>
-              <NavbarBrand href="/">Gamer list</NavbarBrand>
-              <NavbarToggler onClick={this.toggle}/>
-              <Collapse isOpen={this.state.isOpen} navbar>
-                <Nav class="ml=auto" navbar>
-                  <NavItem>
-                    <NavLink href="https://github.com/trallala9/MERN.git">Github</NavLink>
-                  </NavItem>
-                </Nav>
-              </Collapse>
-          </Container>
+class AppNavbar extends Component {
+  state = {
+    isOpen: false
+  }
 
+  toggle = () => {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
+  render() {
+    return (
+      <div>
+        <Navbar color="dark"
+          dark expand="sm"
+          className="mb-5">
+          <Container>
+            <NavbarBrand href="/">Shopping list</NavbarBrand>
+            <NavbarToggler onClick={this.toggle} />
+            <Collapse isOpen={this.state.isOpen} navbar>
+              <Nav className="ml-auto" navbar>
+                <NavItem>
+                  <NavLink href="#">Github</NavLink>
+                </NavItem>
+              </Nav>
+            </Collapse>
+          </Container>
         </Navbar>
-      </div>  
-    }
+      </div>
+    );
+  }
 }
 export default AppNavbar;

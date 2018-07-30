@@ -1,5 +1,5 @@
 const express = require('express');
-const router = express.Router();//router is a part of express object
+const router = express.Router(); //router is a part of express object
 
 //Item Model
 const Item = require('../../models/Item.js');
@@ -30,9 +30,12 @@ router.post('/', (req, res) => {
 // @access Public
 router.delete('/:id', (req, res) => {
     Item.findById(req.params.id)
-    .then(item => item.remove().then(() => res.json({success:true})))
-    .catch(err => res.status(404).json({success:false}));
+        .then(item => item.remove().then(() => res.json({
+            success: true
+        })))
+        .catch(err => res.status(404).json({
+            success: false
+        }));
 });
-
 
 module.exports = router;

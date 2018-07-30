@@ -1,6 +1,8 @@
-const express = require('express');//our backend framework
+//set up simple server this is what we need
+
+const express = require('express'); //our backend framework
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');//allow us to take requests and get data from the body
+const bodyParser = require('body-parser'); //allow us to take requests and get data from the body
 
 const items = require('./routes/api/items');
 //initialise express into variable called app
@@ -14,7 +16,7 @@ const db = require('./config/keys').mongoURI;
 //connect to Mongo
 mongoose
     .connect(db)
-    .then(() => console.log('MongoDB Connected'))//callback
+    .then(() => console.log('MongoDB Connected')) //callback
     .catch(err => console.log(err));
 //Use Routes
 app.use('/api/items', items);

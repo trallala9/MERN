@@ -1,3 +1,4 @@
+//to create Scheema we need moongose
 const mongoose = require('mongoose');
 //cerate Schema and connect to mongoose
 const Schema = mongoose.Schema;
