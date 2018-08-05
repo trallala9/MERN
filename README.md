@@ -1,3 +1,3 @@
 # MERN
 
-I am stull working on it :)
+I am still working on it :)
